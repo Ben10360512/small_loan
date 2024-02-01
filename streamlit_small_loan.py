@@ -1,6 +1,11 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import os
+
+# 使用絕對路徑
+model_path = os.path.join(os.getcwd(), 'path_to_model', 'small_loan_rf_model.pkl')
+model = joblib.load(model_path)
 
 st.write("# Small Loan Prediction")
 
